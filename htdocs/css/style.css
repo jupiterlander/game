@@ -24,3 +24,39 @@ p {
 .large {
     font-size: xx-large;
 }
+
+input[type="submit"] {
+    width: 10rem;
+    padding: 0.5rem;
+    background-color: lightgreen;
+    margin: 1rem;
+}
+
+table {
+    margin: auto;
+}
+
+table, tr, th, td {
+    border-style: solid;
+    border-width: thin;
+    border-collapse: collapse;
+}
+
+td:last-child {
+    width: 2rem;
+    text-align: center;
+}
+td {
+    padding: 0.5rem;
+    height: 1.2rem;
+}
+
+fieldset {
+    padding: 1rem;
+}
+
+fieldset > div {
+    height: 3rem;
+    margin: auto;
+    width: 5rem;
+}

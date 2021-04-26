@@ -20,7 +20,7 @@ class Dice
     }
 
 
-    /**
+      /**
      * Roll the dice
      *
      * @return int
@@ -35,9 +35,9 @@ class Dice
     /**
      * Roll the dice
      *
-     * @return int
+     * @return ?int
      */
-    public function getLastRoll(): int
+    public function getLastRoll(): ?int
     {
         return $this->lastRoll;
     }

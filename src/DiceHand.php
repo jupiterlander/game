@@ -28,10 +28,29 @@ class DiceHand extends Dice
      *
      * @return void
      */
-    public function rollHand(): void
+    public function rollHand(?array $diceToRoll = null): void
     {
-        foreach ($this->dices as &$dice) {
-            $dice->roll();
+        // var_dump($this->dices);
+        //echo "<pre>".print_r($diceToRoll,true).print_r($this->dices,true). "</pre>";
+        if ($diceToRoll) {
+            foreach (array_keys($diceToRoll) as $index) {
+                $this->dices[$index]->roll();
+            }
+        } else {
+            foreach ($this->dices as &$dice) {
+                $dice->roll();
+            }
+        }
+    }
+
+
+    public function updateHoldDice(array $hold)
+    {
+        $count = count($this->dices);
+
+        for ($i = 0; $i < $count; $i++) {
+            $hold = $hold[$i] ?? false;
+            $this->dices[$i]->setHold($hold);
         }
     }
 

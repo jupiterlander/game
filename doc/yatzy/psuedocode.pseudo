@@ -1,0 +1,55 @@
+// Pseudocode for the main class Yatzygame
+// Kmom02 - MVC-V21 - BTH
+// adpr12
+//
+
+class YatzyGame do
+
+   private  player
+
+    constructor() do
+        player = new YatzyPlayer();
+    end
+
+    //
+    // actionfunction for modifying data
+    //
+    function play(action, arg) do
+        switch(action) do
+            case "roll":
+                player.rollHand(arg)
+                break
+            case "setscore":
+                player.scorebord(arg)
+                player.rolls++
+            break
+            case "Newgame":
+                player = new YatzyPlayer();
+            break
+        end
+    end
+
+     //
+     // functions for data retrieving
+     //
+     public function getPlayerHand()
+     {
+         return player.getDiceHand();
+     }
+ 
+     public function getRolls()
+     {
+         return player.getRolls();
+     }
+ 
+     public function getTotal()
+     {
+         return player->getScoreBoard().getTotalScore();
+     }
+ 
+     public function getScoreboard()
+     {
+         return player.getScoreBoard().getScore();
+     }
+end
+
