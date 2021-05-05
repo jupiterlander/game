@@ -41,4 +41,12 @@ class Dice
     {
         return $this->lastRoll;
     }
+
+    /**
+     * Get the value of faces
+     */
+    public function getFaces()
+    {
+        return $this->faces;
+    }
 }

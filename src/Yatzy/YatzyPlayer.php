@@ -49,58 +49,6 @@ class YatzyPlayer
 
 
     /**
-     * Return graphical representation string of rolls
-     *
-     * @return string
-     */
-    public function getGraphicalRolls(): string
-    {
-        $result = "";
-
-        foreach ($this->rolls as $value) {
-            $result .= $this->diceHand->valueToFace($value);
-        }
-
-        return $result;
-    }
-
-
-
-    /**
-     * Get the total
-     *
-     * @return int
-     */
-    public function getTotal(): int
-    {
-        $total = 0;
-
-        foreach ($this->rolls as $value) {
-            $total += $value;
-        }
-        return $total;
-    }
-
-
-    /**
-     * Get the value of status
-     */
-    public function getStatus(): string
-    {
-        return $this->status;
-    }
-
-    /**
-     * Set the value of status
-     *
-     * @return  void
-     */
-    public function setStatus(string $status): void
-    {
-        $this->status = $status;
-    }
-
-    /**
      * Get the value of rolls
      */
     public function getRolls(): int

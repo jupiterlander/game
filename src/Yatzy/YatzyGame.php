@@ -25,7 +25,7 @@ class YatzyGame
     }
 
 
-    public function play(string $action, ?array $arg)
+    public function play(?string $action, ?array $arg)
     {
         $_SESSION['tmp'] = $_POST;
         switch ($action) {
@@ -55,11 +55,6 @@ class YatzyGame
     public function getRolls()
     {
         return $this->player->getRolls();
-    }
-
-    public function getTotal()
-    {
-        return $this->player->getScoreBoard()->getTotalScore();
     }
 
 
