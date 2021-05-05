@@ -15,6 +15,14 @@ class DiceHand extends Dice
     /**
      * Constructor
      */
+    /* public function __construct(Dice ...$dice)
+    {
+        $this->dices = $dice;
+    }
+ */
+    /**
+     * Constructor
+     */
     public function __construct(int $dices = 6, int $faces = 6)
     {
         for ($i = 0; $i < $dices; $i++) {
@@ -44,7 +52,7 @@ class DiceHand extends Dice
     }
 
 
-    public function updateHoldDice(array $hold)
+    /* public function updateHoldDice(array $hold)
     {
         $count = count($this->dices);
 
@@ -52,7 +60,7 @@ class DiceHand extends Dice
             $hold = $hold[$i] ?? false;
             $this->dices[$i]->setHold($hold);
         }
-    }
+    } */
 
 
     /**

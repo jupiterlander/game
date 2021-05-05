@@ -1,4 +1,7 @@
 {
+    "name" : "jupiterlander/game",
+    "description": "Course mvc.",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Mos\\": "src/",

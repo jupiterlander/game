@@ -4,6 +4,7 @@ namespace Jupiterlander;
 
 use Jupiterlander\DiceHand as DiceHand;
 use Jupiterlander\Status as Status;
+use Jupiterlander\GraphicalDice as Dice;
 
 class DicePlayer
 {
@@ -21,10 +22,27 @@ class DicePlayer
      */
     public function __construct(int $dices = 2, int $faces = 6, array $rolls = array(), string $status = Status::WAITING)
     {
+        //$this->diceHand = new DiceHand(...$this->createDiceArr($dices, $faces)) ;
         $this->diceHand = new DiceHand($dices, $faces);
         $this->rolls = $rolls;
         $this->status = $status;
     }
+
+
+     /**
+     * Helper function to create array of dice objects
+     *
+     * @return array
+     */
+   /*  private function createDiceArr($length, $faces): array
+    {
+       $arr = array();
+
+       for ($i = 0; $i < $length; $i++) {
+           $arr[] = new Dice($faces);
+       }
+        return $arr;
+    } */
 
 
   /**

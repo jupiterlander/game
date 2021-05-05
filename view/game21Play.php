@@ -12,7 +12,7 @@ $message = $message ?? null;
 $winner = null;
 $action = $_POST['action'] ?? null;
 
-$game = isset($_SESSION['game']) ? unserialize($_SESSION['game']) : new Game(intval($_POST['dices']) ?? 2);
+$game = isset($_SESSION['game']) ? unserialize($_SESSION['game']) : new Game(intval($_POST['dices'] ?? 2));
 
 switch ($action) {
     case 'Rematch':

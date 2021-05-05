@@ -77,14 +77,4 @@ class ScoreBoard
     {
         return $this->scores["firstBlock"][$key]["dieValue"];
     }
-
-    public function getTotalScore(): int
-    {
-        $total = 0;
-
-        foreach ($this->scores["firstBlock"] as $score) {
-            $total += $score['score'];
-        }
-        return $total;
-    }
 }

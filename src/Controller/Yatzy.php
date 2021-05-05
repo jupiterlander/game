@@ -44,7 +44,7 @@ class Yatzy
     public function process(): ResponseInterface
     {
         $yatzy = isset($_SESSION['yatzy']) ? unserialize($_SESSION['yatzy']) : new YatzyGame();
-        $yatzy->play($_POST['action'], $_POST);
+        $yatzy->play($_POST['action'] ?? null, $_POST);
         $_SESSION['yatzy'] = serialize($yatzy);
 
         $psr17Factory = new Psr17Factory();
